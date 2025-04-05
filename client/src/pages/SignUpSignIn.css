@@ -1,0 +1,13 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}

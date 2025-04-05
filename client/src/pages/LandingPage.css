@@ -1,0 +1,209 @@
+.landing-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.landing-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.landing-page p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.landing-page button {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.features-section {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.features-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.how-it-works-section {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.how-it-works-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.how-it-works-section h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonials-section {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.blockquote {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    margin-bottom: 20px;
+}
+
+.contact-us-section {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-us-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.contact-us-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-us-section h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-page h1 {
+        font-size: 2rem;
+    }
+
+    .landing-page p {
+        font-size: 1rem;
+    }
+
+    .features-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how-it-works-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-us-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-image {
+        max-width: 120px;
+    }
+
+    .how-it-works-section h4 {
+        font-size: 1rem;
+    }
+
+    .contact-us-section h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .landing-page p {
+        font-size: 0.9rem;
+    }
+
+    .features-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .features-section p {
+        font-size: 0.9rem;
+    }
+
+    .how-it-works-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .how-it-works-section h4 {
+        font-size: 0.9rem;
+    }
+
+    .testimonials-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-us-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-us-section h4 {
+        font-size: 0.9rem;
+    }
+
+    .feature-image {
+        max-width: 100px;
+    }
+}
