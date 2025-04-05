@@ -8,24 +8,20 @@ router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // Validate input
         if (!email || !password) {
             return res.status(400).json({ message: 'Email and password are required' });
         }
 
-        // Find user by email
         const user = await User.findOne({ email });
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
 
-        // Compare passwords
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 
-        // Respond with success
         res.status(200).json({ message: 'Sign-in successful', user });
     } catch (error) {
         console.error('Sign-in error:', error);
@@ -35,11 +31,11 @@ router.post('/signin', async (req, res) => {
 
 // Sign-up route
 router.post('/signup', async (req, res) => {
-    const { name, username, phone, email, password, confirmPassword } = req.body;
+    const { name, username, phone, email, password, confirmPassword, role } = req.body;
 
     try {
         // Validate input
-        if (!name || !username || !phone || !email || !password || !confirmPassword) {
+        if (!name || !username || !phone || !email || !password || !confirmPassword || !role) {
             return res.status(400).json({ message: 'All fields are required' });
         }
 
@@ -63,6 +59,7 @@ router.post('/signup', async (req, res) => {
             phone,
             email,
             password: hashedPassword,
+            role, // Ensure role is included
         });
 
         await newUser.save();

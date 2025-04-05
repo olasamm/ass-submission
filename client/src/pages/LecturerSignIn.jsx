@@ -23,7 +23,7 @@ const LecturerSignIn = () => {
                 setMessage(data.message);
                 setTimeout(() => navigate('/lecturer/dashboard'), 2000); // Redirect to lecturer dashboard
             } else {
-                setMessage(data.message);
+                setMessage(data.message); // Display error message if credentials are invalid
             }
         } catch (error) {
             setMessage('An error occurred. Please try again.');

@@ -31,7 +31,7 @@ const LecturerSignUp = () => {
             const response = await fetch('http://localhost:2000/api/auth/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, role: 'lecturer' }), // Add role field
             });
 
             const data = await response.json();
@@ -51,7 +51,7 @@ const LecturerSignUp = () => {
         <div className="form-wrapper">
             <form onSubmit={handleSignUp}>
                 <div className="container mt-5">
-                    <h1 className="text-center mb-4">Welcome to Signup</h1>
+                    <h1 className="text-center mb-4">Lecturer Sign Up</h1>
                     <div className="card p-4 shadow">
                         <input
                             type="text"

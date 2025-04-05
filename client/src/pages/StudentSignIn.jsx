@@ -23,7 +23,7 @@ const StudentSignIn = () => {
                 setMessage(data.message);
                 setTimeout(() => navigate('/student/dashboard'), 2000); // Redirect to student dashboard
             } else {
-                setMessage(data.message);
+                setMessage(data.message); // Display error message if credentials are invalid
             }
         } catch (error) {
             setMessage('An error occurred. Please try again.');

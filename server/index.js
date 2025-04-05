@@ -21,7 +21,7 @@ app.use('/api/admin', adminRoutes);
 
 // MongoDB connection
 const mongoURI = process.env.uri;
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI)
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => {
         console.error('MongoDB connection error:', err);

@@ -36,7 +36,7 @@ const SignUp = () => {
             const data = await response.json();
             if (response.ok) {
                 setMessage(data.message);
-                setTimeout(() => navigate('/signin'), 2000); // Redirect to sign-in page after 2 seconds
+                setTimeout(() => navigate('/signin'), 2000); // Redirect to sign-in page
             } else {
                 setMessage(data.message);
             }
